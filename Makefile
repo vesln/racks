@@ -11,4 +11,11 @@ test:
 		--ui $(UI) \
 		$(TESTS)
 
+browser: $(SRC)
+	@node support/compile $^
+
+clean:
+	@rm -f racks.js
+	@rm -f racks.min.js
+
 .PHONY: test

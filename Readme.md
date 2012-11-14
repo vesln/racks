@@ -2,6 +2,8 @@
 
 # racks
 
+Reusable middleware implementation for Node.js & the browsers.
+
 ## Synopsis
 
 ## Requirements

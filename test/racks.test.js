@@ -3,7 +3,7 @@
  * Internal dependencies.
  */
 
-var Racks = require('..') || Racks;
+var Racks = Racks || require('..');
 
 describe('Racks', function() {
   it('can invoke registered middlewares', function(done) {
