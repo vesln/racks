@@ -6,16 +6,63 @@ Reusable middleware implementation for Node.js & the browsers.
 
 ## Synopsis
 
-## Requirements
+```js
+var Racks = require('racks');
 
-- Node.js >= 0.6.0
+var app = new Racks;
+
+// Register middlewares
+
+app.use(function(stuff, next) { // next will always be the last param
+  next();
+});
+
+app.use(function(stuff, next) {
+  next();
+});
+
+// Register a function, triggered after each callback
+
+app.after(function(stuff, next) {
+  console.log('Called after every single middleware');
+  console.log('Useful for debugging or logging');
+});
+
+// Trigger
+
+app.send(stuff); // you can pass as much args as you want
+
+```
+
+## Installation
+
+Node.js:
+
+```
+$ npm install racks
+```
+
+Browser:
+
+Download `racks.min.js`, it's all you need.
+
+```html
+<script src="racks.min.js"></script>
+```
 
 ## Tests
+
+Node.js:
 
 ```
 $ npm install
 $ make test
 ```
+
+Browser:
+
+- Clone the repository
+- Open `test/browser/index.html` in your favourite browser
 
 ## License
 
