@@ -92,4 +92,16 @@ describe('Racks', function() {
 
     racks.send();
   });
+  it('should always call in the context of the rack', function (done) {
+    var rack = new Racks
+    rack.use(function (next) {
+      this.should.equal(rack)
+      next()
+    })
+    rack.use(function (next) {
+      this.should.equal(rack)
+      done()
+    })
+    rack.send()
+  })
 });

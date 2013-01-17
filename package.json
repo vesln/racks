@@ -11,8 +11,13 @@
     "type": "git",
     "url": "https://github.com/vesln/racks"
   },
-  "keywords": ["middleware", "middlewares"],
-  "dependencies": {},
+  "keywords": [
+    "middleware",
+    "middlewares"
+  ],
+  "dependencies": {
+    "sliced": "0.0.4"
+  },
   "devDependencies": {
     "folio": "~0.3.4",
     "mocha": "*",
