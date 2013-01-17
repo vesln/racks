@@ -1,0 +1,9 @@
+{
+	"name": "racks",
+	"version": "0.0.1",
+  	"description": "Reusable middleware implementation for Node.js & the browsers",
+  	"scripts": ["lib/racks.js"],
+  	"dependencies": {
+  		"aheckmann/sliced":  "*"
+  	}
+}
